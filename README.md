@@ -55,12 +55,11 @@ Este servicio permite buscar información de libros tanto en la BD local, como e
         "service": "local"
     }
   ]
-  
-  `
- 
+  ``` 
   <Google>
   * **Code:** 200 <br />
-    **Content:** `
+    **Content:**
+    ```
     {
     "kind": "books#volumes",
     "totalItems": 522,
