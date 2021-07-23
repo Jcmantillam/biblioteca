@@ -13,9 +13,9 @@ python manage.py migrate
 Los servicios principales son el de búsqueda, guardar un libro y eliminar un libro. Adicionalmente, se puede utilizar le servicio ofrecido por Django Rest framework consultar los libros guardados, o crear un super usuario para Django Admin.  A continuación se explica cada servicio:
 
 **Search Book**
-Este servicio permite buscar información de libros tanto en la BD local, como en los servicios externos soportados `GoogleBooks` y `Oreilly`
+
 ----
-  <Retorna un json con los resultado encontrados, si no hay datos en la BD local, busca en el servicio alternativo indicado>
+  Este servicio permite buscar información de libros tanto en la BD local, como en los servicios externos soportados `GoogleBooks` y `Oreilly`
  
  * **URL**
 
