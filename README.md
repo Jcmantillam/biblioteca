@@ -185,4 +185,22 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
 
   ``` 
   
+ **Save Book**
+
+  Este servicio está habilitado para guardar un resultado de la búsqueda externa seleccionada, sea `GoogleBooks` u `Oreilly`, como se puede observar, en los resultados de búsqueda anteriores, al final de los campos de cada libro, aparece un campo llamado `save_link`, este campo facilita el vínculo para realizar el guardado  del libro al cual pertenece en la BD local.
  
+ * **URL:** <api/v1/save_book/>
+ 
+ * **Método:**
+  `POST`
+
+* **Parámetros en URL**
+**Requeridos:**<br>
+  `?book_id_g=:[String]`<br>
+  `?book_id_o=:[String]`<br><br>
+ `?book_id_g=` es para guardar un libro encontrado en el API de Google, mientras que `?book_id_o=` es para guardar un libro del API de Oreilly<br>
+
+* **Respuesta:**
+  
+  En BD Local
+  * **Código:** 201 <br>
