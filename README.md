@@ -24,7 +24,7 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
 * **Parámetros de datos**
 **Requeridos:**<br>
   `search_term=[String]`<br>
-  `alternative_service:[Char]`<br>
+  `alternative_service:[Char]`<br><br>
  `search_term` es el término buscado, mientras que `alternative_service` determina qué API externa se usará, G para Google y O para O'reilly<br>
 
 * **Respuesta:**
