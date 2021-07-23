@@ -204,3 +204,22 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
   
   En BD Local
   * **Código:** 201 <br>
+
+**Delete Book**
+
+  Con este servicio se puede eliminar un libro de la BD local.
+ 
+ * **URL:** <api/v1/delete_book/>
+ 
+ * **Método:**
+  `POST`
+
+* **Parámetros de datos**
+**Requeridos:**<br>
+  `id=[integer]`<br><br>
+ `id` es el id del libro que se desea eliminar.<br>
+
+* **Respuesta:**
+  
+  En BD Local
+  * **Código:** 200 <br>
