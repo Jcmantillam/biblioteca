@@ -34,7 +34,9 @@ Este servicio permite buscar información de libros tanto en la BD local, como e
   
   <Local>
   * **Code:** 200 <br />
-    **Content:** `[
+    **Content:** 
+  ```
+  [
     {
         "id": 5,
         "title": "Python machine learning",
@@ -122,12 +124,13 @@ Este servicio permite buscar información de libros tanto en la BD local, como e
             "save_link": "http://localhost:8000/api/v1/save_book/?book_id_g=c6a2wgEACAAJ"
         }
     ],
-    "service": "G"`
-
+    "service": "G"
+```
   <Oreilly>
   * **Code:** 200 <br />
-    **Content:** `
-    {
+    **Content:**
+  ```
+   {
     "results": [
         {
             "id": "https://www.safaribooksonline.com/api/v1/book/9780135917411/",
@@ -177,5 +180,5 @@ Este servicio permite buscar información de libros tanto en la BD local, como e
             "save_link": "http://localhost:8000/api/v1/save_book/?book_id_o=9780135917411"
         }
 }
-    `
+```
  
