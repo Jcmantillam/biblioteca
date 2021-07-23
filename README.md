@@ -33,7 +33,7 @@ Este servicio permite buscar información de libros tanto en la BD local, como e
 * **Respuesta:**
   
   <Local>
-  * **Code:** 200 <br />
+  * **Code:** 200
     **Content:** 
   ```
   [
