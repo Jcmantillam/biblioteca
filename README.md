@@ -35,6 +35,7 @@ Este servicio permite buscar información de libros tanto en la BD local, como e
   En BD Local
   * **Código:** 200 <br>
   * **Contenido:** <br>
+  
   ```
   [
     {
@@ -60,6 +61,7 @@ Este servicio permite buscar información de libros tanto en la BD local, como e
   Con Google como alternativa
   * **Código:** 200 <br>
   * **Contenido:** <br>
+  
   ```
   {
     "kind": "books#volumes",
@@ -130,6 +132,7 @@ Este servicio permite buscar información de libros tanto en la BD local, como e
   Con O'reilly como alternativa
   * **Código:** 200 <br>
   * **Contenido:** <br>
+  
   ```
   {
      {
