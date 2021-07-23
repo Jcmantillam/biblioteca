@@ -9,7 +9,7 @@ cd biblioteca
 pip install -r requirements.txt
 python manage.py migrate
 ```
-***Servicios***
+**Servicios**
 Los servicios principales son el de búsqueda, guardar un libro y eliminar un libro. Adicionalmente, se puede utilizar le servicio ofrecido por Django Rest framework consultar los libros guardados, o crear un super usuario para Django Admin.  A continuación se explica cada servicio:
 
 **Search Book**
