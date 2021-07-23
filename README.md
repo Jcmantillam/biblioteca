@@ -32,9 +32,9 @@ Este servicio permite buscar información de libros tanto en la BD local, como e
 
 * **Respuesta:**
   
-  BD Local
-  * **Code:** 200
-    **Content:**
+  En BD Local
+  * **Código:** 200 <br>
+    **Contenido:**
   ```
   [
     {
@@ -55,6 +55,134 @@ Este servicio permite buscar información de libros tanto en la BD local, como e
         "service": "local"
     }
   ]
+  ``` 
+  
+  Con Google como alternativa
+  * **Código:** 200 <br>
+    **Contenido:**
+  ```
+  {
+    "kind": "books#volumes",
+    "totalItems": 522,
+    "items": [
+        {
+            "kind": "books#volume",
+            "id": "c6a2wgEACAAJ",
+            "etag": "TPW/jYQQw4M",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/c6a2wgEACAAJ",
+            "volumeInfo": {
+                "title": "Python Machine Learning: Aprendizaje automático y aprendizaje profundo con Python, scikit-learn y TesnorFlow",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "8426727204"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9788426727206"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 618,
+                "printType": "BOOK",
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "language": "es",
+                "previewLink": "http://books.google.com.co/books?id=c6a2wgEACAAJ&dq=Python&hl=&cd=1&source=gbs_api",
+                "infoLink": "http://books.google.com.co/books?id=c6a2wgEACAAJ&dq=Python&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Python_Machine_Learning_Aprendizaje_auto.html?hl=&id=c6a2wgEACAAJ"
+            },
+            "saleInfo": {
+                "country": "CO",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "CO",
+                "viewability": "NO_PAGES",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=c6a2wgEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "NONE",
+                "quoteSharingAllowed": false
+            },
+            "save_link": "http://localhost:8000/api/v1/save_book/?book_id_g=c6a2wgEACAAJ"
+        }
+    ],
+    "service": "G"
+  ``` 
+  
+  Con O'reilly como alternativa
+  * **Código:** 200 <br>
+    **Contenido:**
+  ```
+  {
+     {
+    "results": [
+        {
+            "id": "https://www.safaribooksonline.com/api/v1/book/9780135917411/",
+            "archive_id": "9780135917411",
+            "ourn": "urn:orm:video:9780135917411",
+            "last_modified_time": "2020-08-20T15:47:56.431Z",
+            "issued": "2019-08-26T00:00:00Z",
+            "format": "video",
+            "content_format": "video",
+            "authors": [
+                "Paul J. Deitel"
+            ],
+            "publishers": [
+                "Pearson"
+            ],
+            "academic_excluded": false,
+            "language": "en",
+            "title": "Python Fundamentals",
+            "url": "https://learning.oreilly.com/api/v1/book/9780135917411/",
+            "web_url": "/videos/python-fundamentals/9780135917411/",
+            "source": "application/epub+zip",
+            "content_type": "book",
+            "duration_seconds": 162910,
+            "video_classification": "course",
+            "has_assessment": false,
+            "timestamp": "2021-06-02T23:20:46.773Z",
+            "description": "description",
+            "average_rating": 4935,
+            "number_of_followers": 0,
+            "number_of_items": 0,
+            "number_of_reviews": 31,
+            "popularity": 999967990,
+            "report_score": 153000,
+            "cover_url": "https://learning.oreilly.com/library/cover/9780135917411/",
+            "date_added": "2019-04-03T21:55:14.126Z",
+            "topics": [
+                "cda50ea0-3a3a-4d54-89bb-a7a4179365e6"
+            ],
+            "topics_payload": [
+                {
+                    "uuid": "cda50ea0-3a3a-4d54-89bb-a7a4179365e6",
+                    "slug": "python",
+                    "name": "Python",
+                    "score": null
+                }
+            ],
+            "save_link": "http://localhost:8000/api/v1/save_book/?book_id_o=9780135917411"
+        }
+  }
+
   ``` 
   
  
