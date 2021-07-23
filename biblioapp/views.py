@@ -62,7 +62,7 @@ def SaveBook(request):
             data = get_book_by_id(orelly_book_id, 'O')
             save_book(data, 'O')
 
-        return Response(data, status=status.HTTP_200_OK)
+        return Response({}, status=status.HTTP_201_CREATED)
 
 
 @api_view(["DELETE"])
@@ -70,5 +70,11 @@ def DeleteBook(request):
     serializer = DeleteSerializer(data=request.data)
     if serializer.is_valid():
             book_id = serializer.data['id']
+            book = Book.objects.filter(id=book_id)
+            content = {'error': 'The id does not exists'}
+            if not book:
+                return Response(content, status=status.HTTP_404_NOT_FOUND)
             Book.objects.get(id=book_id).delete()
-    return Response()
+                
+
+    return Response({}, status=status.HTTP_200_OK)

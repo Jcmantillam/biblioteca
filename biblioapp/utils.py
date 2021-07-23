@@ -56,12 +56,22 @@ def add_save_method(books, method, key):
 def save_book(data, option):
     if option == SERVICE_CHOICES[0][0]:
         title = data["volumeInfo"]["title"]
+
         try:
             subtitle = data["volumeInfo"]["subtitle"]
         except:
             subtitle = title
-        description = data["volumeInfo"]["description"]
-        image = data["volumeInfo"]["imageLinks"]["thumbnail"]
+
+        try:
+            description = data["volumeInfo"]["description"]
+        except:
+            description = "Not found"
+
+        try:
+            image = data["volumeInfo"]["imageLinks"]["thumbnail"]
+        except:
+            image = None
+
         date_str = data["volumeInfo"]["publishedDate"]
         editor_name = data["volumeInfo"]["publisher"]
         authors_name = data["volumeInfo"]["authors"]
