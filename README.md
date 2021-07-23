@@ -16,9 +16,7 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
 
   Este servicio permite buscar información de libros tanto en la BD local, como en los servicios externos soportados `GoogleBooks` y `Oreilly`
  
- * **URL**
-
-  <api/v1/search_book/>
+ * **URL:** <api/v1/search_book/>
  
  * **Método:**
   `GET`
