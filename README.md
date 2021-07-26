@@ -12,7 +12,7 @@ python manage.py migrate
 ## Servicios
 Los servicios principales son el de búsqueda, guardar un libro y eliminar un libro. Adicionalmente, se puede utilizar le servicio ofrecido por Django Rest framework consultar los libros guardados, o crear un super usuario para Django Admin.  A continuación se explica cada servicio:
 
-**Login API**
+### Login API
 
   Este servicio permite buscar información de libros tanto en la BD local, como en los servicios externos soportados `GoogleBooks` y `Oreilly`
  
@@ -39,7 +39,7 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
   }
   ``` 
 
-**Search Book**
+### Search Book
 
   Este servicio permite buscar información de libros tanto en la BD local, como en los servicios externos soportados `GoogleBooks` y `Oreilly`
  
@@ -218,7 +218,7 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
 
   ``` 
   
- **Save Book**
+ ### Save Book
 
   Este servicio está habilitado para guardar un resultado de la búsqueda externa seleccionada, sea `GoogleBooks` u `Oreilly`, como se puede observar, en los resultados de búsqueda anteriores, al final de los campos de cada libro, aparece un campo llamado `save_link`, este campo facilita el vínculo para realizar el guardado  del libro al cual pertenece en la BD local.
  
@@ -226,6 +226,12 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
  
  * **Método:**
   `POST`
+ 
+ **Headers**
+
+|**Name**|**Type**|**Description**|
+|------|------|------|
+| <center>Authorization</center> | <center>string</center>  | <center>Token String</center> |
 
 * **Parámetros en URL**
 **Requeridos:**<br>
@@ -238,7 +244,7 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
   En BD Local
   * **Código:** 201 <br>
 
-**Delete Book**
+### Delete Book
 
   Con este servicio se puede eliminar un libro de la BD local.
  
@@ -246,6 +252,12 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
  
  * **Método:**
   `POST`
+
+**Headers**
+
+|**Name**|**Type**|**Description**|
+|------|------|------|
+| <center>Authorization</center> | <center>string</center>  | <center>Token String</center> |
 
 * **Parámetros de datos**
 **Requeridos:**<br>
