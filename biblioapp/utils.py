@@ -1,15 +1,22 @@
 import datetime
+import json
 import requests
+from rest_framework.authtoken.models import Token
 from .constants import SERVICE_CHOICES
 from .models import Editor, Category, Author, Book
 from .constants import local_api_service, google_api_service, get_google_book, get_oreilly_book, oreilly_api_service, local_save_book
 
 
-def API_request(search, option):
+def API_request(search, option, auth=None):
     if option == "local":
-        service = local_api_service + search
-        r = requests.get(service)
+        url = local_api_service + search
+
+        headers = {
+            'Authorization': 'Token  {}'.format(auth)
+        }
+        r = requests.request("GET", url, headers=headers, data={})
         data = r.json()
+
         if data: 
             data[0]['service'] = option
         return data

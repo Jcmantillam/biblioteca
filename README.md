@@ -1,7 +1,7 @@
 # biblioteca
 Proyecto en python django para buscar y almacenar información, permitiendo la consulta a los APIs de Google books y Oreilly
 
-**Instalación**<br>
+## Instalación
 Se descarga el proyecto, y se va a la ubicación del direcotrio principal, se utilizan los siguientes comandos:
 ```
 git clone https://github.com/Jcmantillam/biblioteca.git
@@ -9,10 +9,37 @@ cd biblioteca
 pip install -r requirements.txt
 python manage.py migrate
 ```
-**Servicios**<br>
+## Servicios
 Los servicios principales son el de búsqueda, guardar un libro y eliminar un libro. Adicionalmente, se puede utilizar le servicio ofrecido por Django Rest framework consultar los libros guardados, o crear un super usuario para Django Admin.  A continuación se explica cada servicio:
 
-**Search Book**
+### Login API
+
+  Este servicio permite buscar información de libros tanto en la BD local, como en los servicios externos soportados `GoogleBooks` y `Oreilly`
+ 
+ * **URL:** <api/login>
+ 
+ * **Método:**
+  `POST`
+
+* **Parámetros de datos**
+**Requeridos:**<br>
+  `username=[String]`<br>
+  `password:[String]`<br><br>
+ Con este método se obtiene el token de acceso a los demás endpoints del API.
+
+* **Respuesta:**
+  
+  En BD Local
+  * **Código:** 200 <br>
+  * **Contenido:** <br><br>
+  
+  ```
+  {
+    "token": "5d76615727e04bbb0a95abd39498ee57c97bf4237"
+  }
+  ``` 
+
+### Search Book
 
   Este servicio permite buscar información de libros tanto en la BD local, como en los servicios externos soportados `GoogleBooks` y `Oreilly`
  
@@ -20,6 +47,12 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
  
  * **Método:**
   `GET`
+
+**Headers**
+
+|**Name**|**Type**|**Description**|
+|------|------|------|
+| <center>Authorization</center> | <center>string</center>  | <center>Token String</center> |
 
 * **Parámetros de datos**
 **Requeridos:**<br>
@@ -185,7 +218,7 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
 
   ``` 
   
- **Save Book**
+ ### Save Book
 
   Este servicio está habilitado para guardar un resultado de la búsqueda externa seleccionada, sea `GoogleBooks` u `Oreilly`, como se puede observar, en los resultados de búsqueda anteriores, al final de los campos de cada libro, aparece un campo llamado `save_link`, este campo facilita el vínculo para realizar el guardado  del libro al cual pertenece en la BD local.
  
@@ -193,6 +226,12 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
  
  * **Método:**
   `POST`
+ 
+ **Headers**
+
+|**Name**|**Type**|**Description**|
+|------|------|------|
+| <center>Authorization</center> | <center>string</center>  | <center>Token String</center> |
 
 * **Parámetros en URL**
 **Requeridos:**<br>
@@ -205,7 +244,7 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
   En BD Local
   * **Código:** 201 <br>
 
-**Delete Book**
+### Delete Book
 
   Con este servicio se puede eliminar un libro de la BD local.
  
@@ -213,6 +252,12 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
  
  * **Método:**
   `POST`
+
+**Headers**
+
+|**Name**|**Type**|**Description**|
+|------|------|------|
+| <center>Authorization</center> | <center>string</center>  | <center>Token String</center> |
 
 * **Parámetros de datos**
 **Requeridos:**<br>
