@@ -49,6 +49,15 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
   `GET`
 
 * **Headers**
+
+**Data Format Headers**
+
+|**Name**|**Type**|**Description**|
+|------|------|------|
+|<img width=100/>|<img width=100/>|<img width=500/>|
+| Content-Type | string  | support "application/json" |
+| Accept | string  | support "application/json" |
+
 |**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
