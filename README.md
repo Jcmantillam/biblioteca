@@ -52,7 +52,7 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
 
 |**Name**|**Type**|**Description**|
 |------|------|------|
-| <center>Authorization</center> | <center>string</center>  | <center>Token</center> |
+| <center>Authorization</center> | <center>string</center>  | <center>Token String</center> |
 
 * **Parámetros de datos**
 **Requeridos:**<br>
