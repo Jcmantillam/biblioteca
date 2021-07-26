@@ -1,7 +1,7 @@
 # biblioteca
 Proyecto en python django para buscar y almacenar información, permitiendo la consulta a los APIs de Google books y Oreilly
 
-**Instalación**<br>
+#Instalación<br>
 Se descarga el proyecto, y se va a la ubicación del direcotrio principal, se utilizan los siguientes comandos:
 ```
 git clone https://github.com/Jcmantillam/biblioteca.git
@@ -9,7 +9,7 @@ cd biblioteca
 pip install -r requirements.txt
 python manage.py migrate
 ```
-**Servicios**<br>
+#Servicios<br>
 Los servicios principales son el de búsqueda, guardar un libro y eliminar un libro. Adicionalmente, se puede utilizar le servicio ofrecido por Django Rest framework consultar los libros guardados, o crear un super usuario para Django Admin.  A continuación se explica cada servicio:
 
 **Login API**
