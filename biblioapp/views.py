@@ -35,13 +35,14 @@ class BookSearchView(generics.ListAPIView):
 
 @api_view(['GET'])
 def SearchBook(request):
+    #If athenticated
     if request.method == 'GET':
         response = {}
         serializer = SearchSerializer(data=request.data)
         if serializer.is_valid():
             to_search = serializer.data['search_term']
             service = 'local'
-            data = API_request(to_search, service)
+            data = API_request(to_search, service, request.auth.key)
             if len(data) == 0:
                 service = serializer.data['alternative_service']
                 data = API_request(to_search, service)
