@@ -52,8 +52,7 @@ Los servicios principales son el de búsqueda, guardar un libro y eliminar un li
 
 |**Name**|**Type**|**Description**|
 |------|------|------|
-|<img width=100/>|<img width=100/>|<img width=500/>|
-| Authorization | string  | Token |
+| <center>Authorization</center> | string  | Token |
 
 * **Parámetros de datos**
 **Requeridos:**<br>
